@@ -1,0 +1,29 @@
+:root {
+  --bg:#f5f5f7; --card:rgba(255,255,255,.82); --text:#111114; --muted:#68686f;
+  --line:rgba(0,0,0,.09); --accent:#007aff; --accent2:#5856d6; --shadow:0 18px 50px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;background:radial-gradient(circle at 80% 0%,rgba(88,86,214,.13),transparent 34%),var(--bg);color:var(--text);min-height:100vh}
+body.dark{--bg:#08080b;--card:rgba(24,24,29,.86);--text:#f5f5f7;--muted:#a1a1a8;--line:rgba(255,255,255,.1);--shadow:0 20px 60px rgba(0,0,0,.35);background:radial-gradient(circle at 80% 0%,rgba(88,86,214,.2),transparent 34%),var(--bg)}
+.topbar{height:64px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.brand{font-weight:700;letter-spacing:-.3px}.brand-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));margin-right:9px}
+.icon-btn{border:0;background:var(--card);color:var(--text);width:38px;height:38px;border-radius:50%;font-size:18px}
+main{max-width:980px;margin:auto;padding:70px 20px 80px}
+.hero{text-align:center;margin-bottom:38px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:1.6px;color:var(--accent);margin:0 0 12px}
+h1{font-size:clamp(42px,8vw,72px);line-height:.98;letter-spacing:-3.5px;margin:0}h1 span{color:var(--muted)}
+.hero-copy{max-width:620px;margin:22px auto 0;font-size:17px;line-height:1.5;color:var(--muted)}
+.picker-card,.category{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(18px);border-radius:28px}
+.picker-card{padding:24px;display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:end}
+.picker label{display:block;color:var(--muted);font-size:12px;font-weight:700;margin:0 0 8px}
+select{width:100%;appearance:none;border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--text);padding:15px 16px;font-size:16px;font-weight:600}
+.vs{font-size:12px;font-weight:900;color:var(--muted);padding-bottom:15px}
+.primary{grid-column:1/-1;border:0;border-radius:16px;padding:15px;font-size:16px;font-weight:750;color:white;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 24px rgba(0,122,255,.2)}
+.results{margin-top:38px}.hidden{display:none}
+.compare-head{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin-bottom:18px}.phone-title{font-size:24px;font-weight:800;letter-spacing:-1px}.phone-title:last-child{text-align:right}.vs-pill{font-size:10px;font-weight:900;color:var(--muted);border:1px solid var(--line);padding:7px 9px;border-radius:99px}
+.summary{padding:20px 22px;border-radius:22px;background:linear-gradient(135deg,rgba(0,122,255,.09),rgba(88,86,214,.08));border:1px solid var(--line);margin-bottom:16px}.summary h2{margin:0 0 7px;font-size:17px}.summary p{margin:0;color:var(--muted);line-height:1.5}
+.category{overflow:hidden;margin:14px 0}.category h2{font-size:18px;margin:0;padding:20px 22px;border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1.3fr 1.3fr;gap:12px;padding:17px 22px;border-bottom:1px solid var(--line);align-items:center}.row:last-child{border-bottom:0}.term{font-weight:700}.term button{border:0;background:none;color:var(--accent);font-weight:800;cursor:pointer;margin-left:5px}.value{line-height:1.35}.value.right{text-align:right}.dim{color:var(--muted);font-size:13px;display:block;margin-top:3px}
+dialog{width:min(560px,calc(100% - 30px));border:1px solid var(--line);border-radius:24px;background:var(--card);color:var(--text);padding:28px;box-shadow:0 30px 100px rgba(0,0,0,.3)}dialog::backdrop{background:rgba(0,0,0,.5);backdrop-filter:blur(4px)}
+dialog h2{margin:0 0 10px}.dialog-close{position:absolute;right:15px;top:12px;border:0;background:var(--bg);color:var(--text);border-radius:50%;width:34px;height:34px;font-size:22px}
+.explain{color:var(--muted);line-height:1.55}.tech{font-family:ui-monospace,SFMono-Regular,monospace;font-size:13px;background:var(--bg);padding:12px;border-radius:12px}
+@media(max-width:680px){main{padding-top:46px}.picker-card{grid-template-columns:1fr;gap:12px}.vs{text-align:center;padding:0}.primary{grid-column:auto}.compare-head{grid-template-columns:1fr auto 1fr}.phone-title{font-size:19px}.row{grid-template-columns:1fr 1fr;gap:10px}.term{grid-column:1/-1}.value.right{text-align:right}.hero h1{letter-spacing:-2.5px}}

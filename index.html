@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="iPhone Compare">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>iPhone Compare</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-dot"></span><span>iPhone Compare</span></div>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">☼</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">EVERY DETAIL. EXPLAINED.</p>
+      <h1>Compare iPhones<br><span>without the confusion.</span></h1>
+      <p class="hero-copy">Real technical specifications, with plain-English explanations whenever you need them.</p>
+    </section>
+
+    <section class="picker-card">
+      <div class="picker">
+        <label for="phoneA">iPhone A</label>
+        <select id="phoneA"></select>
+      </div>
+      <div class="vs">VS</div>
+      <div class="picker">
+        <label for="phoneB">iPhone B</label>
+        <select id="phoneB"></select>
+      </div>
+      <button id="compareBtn" class="primary">Compare iPhones</button>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="compare-head">
+        <div class="phone-title" id="titleA"></div>
+        <div class="vs-pill">VS</div>
+        <div class="phone-title" id="titleB"></div>
+      </div>
+      <div id="summary"></div>
+      <div id="specs"></div>
+    </section>
+  </main>
+
+  <dialog id="infoDialog">
+    <button id="closeDialog" class="dialog-close">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
